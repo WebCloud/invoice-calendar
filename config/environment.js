@@ -13,6 +13,16 @@ module.exports = function(environment) {
       }
     },
 
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "'self'",
+      'connect-src': "'self' localhost:*",
+      'img-src': "'self' data: localhost:*",
+      'style-src': "'self' 'unsafe-inline'"
+      // 'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
