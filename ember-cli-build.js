@@ -24,5 +24,27 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import({
+    development: 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+    production:  'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js'
+  });
+
+  app.import({
+    development: 'bower_components/papaparse/papaparse.js',
+    production:  'bower_components/papaparse/papaparse.min.js'
+  });
+
+  app.import('bower_components/moment/min/moment.min.js');
+
+  app.import({
+    development: 'bower_components/fullcalendar/dist/fullcalendar.js',
+    production:  'bower_components/fullcalendar/dist/fullcalendar.min.js'
+  });
+
+  app.import({
+    development: 'bower_components/fullcalendar/dist/fullcalendar.css',
+    production:  'bower_components/fullcalendar/dist/fullcalendar.min.css'
+  });
+
   return app.toTree();
 };
