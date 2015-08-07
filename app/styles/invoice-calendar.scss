@@ -1,0 +1,61 @@
+@import 'bootstrap';
+
+.uploader{
+  border: 0.3rem dashed #dee5e7;
+  background-color: #fff;
+  color: #58666e;
+  text-align: center;
+  margin: 1vh 0 2vh;
+  height: 9vh;
+  width: 100%;
+  font-size: 2rem;
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  &.is-dragging{
+    border-color: limegreen;
+  }
+
+  &.is-disabled{
+    border-color: #acacac;
+    background: #F2F2F2;
+    opacity: 0.3;
+  }
+
+  p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.contract-calendar {
+  height: 88vh;
+  width: 100%;
+  display: block;
+}
+
+.fc-event {
+  cursor: pointer;
+}
+
+.fc-day, .fc-day-number {
+  cursor: pointer;
+
+  &.selected-day {
+      background-color: aliceblue;
+  }
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a, button, input {
+  outline: none;
+}
