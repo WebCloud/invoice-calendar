@@ -1,0 +1,27 @@
+{{#if hasSelectedDay}}
+  <h4>Total due for the {{selectedDay.numberOfContracts}} contract(s) of {{selectedDay.date}}:</h4>
+  €{{selectedDay.total}}
+{{/if}}
+
+<div class="modal fade" id="event-info" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Contract information</h4>
+      </div>
+      <div class="modal-body">
+        Contract number: {{contract.id}} <br>
+        Amount: €{{contract.amount}} <br>
+        {{#if contract.isOverdue}}
+        Overdue from
+        {{else}}
+        Due
+        {{/if}}
+        {{contract.fromNow}} ({{contract.formattedDate}} at {{contract.formattedTime}})
+      </div>
+    </div>
+  </div>
+</div>
